@@ -17,6 +17,7 @@ import { getQueryParam } from '../lib/utils'
 import BLOG from '@/blog.config'
 import ExternalPlugins from '@/components/ExternalPlugins'
 import SEO from '@/components/SEO'
+import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { zhCN } from '@clerk/localizations'
 import dynamic from 'next/dynamic'
@@ -70,6 +71,7 @@ const MyApp = ({ Component, pageProps }) => {
         content
       )}
       <SpeedInsights />
+      <Analytics />
     </>
   )
 }
